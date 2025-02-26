@@ -17,6 +17,8 @@
     max-width: 96%;
   }
   .navigation {
+    display: flex;
+    justify-content: center;
     img {
       width: 240px;
     }
@@ -55,6 +57,29 @@
           justify-content: center;
           gap: 30px;
           font-family: "Poppins", sans-serif;
+          .pageRedirect {
+            display: flex;
+            justify-content: end;
+            span {
+              font-family: "Poppins", sans-serif;
+              font-weight: 600;
+              color: #333333;
+              font-size: 16px;
+              text-transform: capitalize;
+            }
+            .pageLink {
+              font-family: "Poppins", sans-serif;
+              font-weight: 500;
+              color: #333333;
+              font-size: 16px;
+              text-transform: capitalize;
+              cursor: pointer;
+              text-decoration: none;
+              &:hover {
+                color: #b8cd06;
+              }
+            }
+          }
           h1 {
             font-size: 30px;
             font-weight: 500;
@@ -75,6 +100,18 @@
             &:focus-visible {
               outline: none;
               border: 1px solid #b8cd06;
+            }
+          }
+          a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: #333333;
+            font-size: 16px;
+            text-transform: capitalize;
+            cursor: pointer;
+            text-decoration: underline;
+            &:hover {
+              color: #b8cd06;
             }
           }
           .buttn-green {
@@ -174,7 +211,7 @@
 
 @media (max-width: 768px) {
   .main-box {
-    margin: 0;
+    margin: 50px 0 20px 0;
     .container-box {
       .box-row {
         .right-side {

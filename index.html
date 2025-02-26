@@ -6,7 +6,6 @@
     <title>Login / Signup</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Add this to your existing CSS */
       .form-data {
         opacity: 0;
         visibility: hidden;
@@ -39,11 +38,18 @@
       <div class="container-box">
         <div class="box-row">
           <div class="left-side">
-            <img src="Login.webp" alt="Login Image" />
+            <img id="formImage" src="Login.svg" alt="Login Image" />
           </div>
           <div class="right-side">
             <!-- Login Form -->
             <form id="loginForm" class="form-data active">
+              <div class="pageRedirect">
+                <span
+                  >New User<a href="#" id="showSignup" class="pageLink">
+                    Signup</a
+                  ></span
+                >
+              </div>
               <h1>Welcome to Instabarcode</h1>
               <img
                 src="https://instabarcode.com/wp-content/uploads/2023/07/Screen-Shot-2023-08-01-at-01.232.png"
@@ -63,19 +69,20 @@
                 placeholder="Password"
                 required
               />
+              <a href="#"> Forget Password </a>
               <div class="box-row">
                 <input type="button" value="Submit" class="buttn-green" />
-                <input
-                  type="button"
-                  value="Forget Password"
-                  class="buttn-invert"
-                />
-                <a href="#" id="showSignup" class="buttn-green">Signup</a>
               </div>
             </form>
 
             <!-- Signup Form -->
             <form id="signupForm" class="form-data">
+              <div class="pageRedirect">
+                <span
+                  >use existing account
+                  <a href="#" id="showLogin" class="pageLink"> Login</a></span
+                >
+              </div>
               <h1>Welcome to Instabarcode</h1>
               <img
                 src="https://instabarcode.com/wp-content/uploads/2023/07/Screen-Shot-2023-08-01-at-01.232.png"
@@ -118,7 +125,6 @@
               />
               <div class="box-row">
                 <input type="button" value="Submit" class="buttn-green" />
-                <a href="#" id="showLogin" class="buttn-invert">Login</a>
               </div>
             </form>
           </div>
@@ -131,17 +137,20 @@
       const signupForm = document.getElementById("signupForm");
       const showSignup = document.getElementById("showSignup");
       const showLogin = document.getElementById("showLogin");
+      const formImage = document.getElementById("formImage");
 
       showSignup.addEventListener("click", (e) => {
         e.preventDefault();
         loginForm.classList.remove("active");
         signupForm.classList.add("active");
+        formImage.src = "signup.svg";
       });
 
       showLogin.addEventListener("click", (e) => {
         e.preventDefault();
         signupForm.classList.remove("active");
         loginForm.classList.add("active");
+        formImage.src = "Login.svg";
       });
     </script>
   </body>
