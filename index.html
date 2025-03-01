@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login / Signup</title>
+    <title>Instabarcode Login</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       .form-data {
@@ -22,7 +22,8 @@
           <a href="https://instabarcode.com/">
             <img
               src="https://instabarcode.com/wp-content/uploads/2023/07/logo-for-insta-b.png"
-              alt="" />
+              alt=""
+            />
           </a>
         </nav>
       </div>
@@ -36,77 +37,26 @@
           <div class="right-side">
             <!-- Login Form -->
             <form id="loginForm" class="form-data active">
-              <div class="pageRedirect">
-                <span
-                  >New User<a href="#" id="showSignup" class="pageLink">
-                    Signup</a
-                  ></span
-                >
-              </div>
               <h1>Welcome to Instabarcode</h1>
               <img
                 src="https://instabarcode.com/wp-content/uploads/2023/07/Screen-Shot-2023-08-01-at-01.232.png"
-                alt="" />
+                alt=""
+              />
               <input
                 type="email"
                 name="userEmail"
                 id="userEmail"
                 placeholder="Email"
-                required />
+                required
+              />
               <input
                 type="password"
                 name="userPassword"
                 id="userPassword"
                 placeholder="Password"
-                required />
+                required
+              />
               <a href="#"> Forget Password </a>
-              <div class="box-row">
-                <input type="button" value="Submit" class="buttn-green" />
-              </div>
-            </form>
-
-            <!-- Signup Form -->
-            <form id="signupForm" class="form-data">
-              <div class="pageRedirect">
-                <span
-                  >use existing account
-                  <a href="#" id="showLogin" class="pageLink"> Login</a></span
-                >
-              </div>
-              <h1>Welcome to Instabarcode</h1>
-              <img
-                src="https://instabarcode.com/wp-content/uploads/2023/07/Screen-Shot-2023-08-01-at-01.232.png"
-                alt="" />
-              <input
-                type="text"
-                name="userName"
-                id="userName"
-                placeholder="Name"
-                required />
-              <input
-                type="number"
-                name="userPhone"
-                id="userPhone"
-                placeholder="Phone Number"
-                required />
-              <input
-                type="email"
-                name="userEmail"
-                id="userEmail"
-                placeholder="Email"
-                required />
-              <input
-                type="password"
-                name="userPassword"
-                id="userPassword"
-                placeholder="Password"
-                required />
-              <input
-                type="password"
-                name="userConfirmPassword"
-                id="userConfirmPassword"
-                placeholder="Confirm Password"
-                required />
               <div class="box-row">
                 <input type="button" value="Submit" class="buttn-green" />
               </div>
@@ -115,27 +65,5 @@
         </div>
       </div>
     </section>
-
-    <script>
-      const loginForm = document.getElementById("loginForm");
-      const signupForm = document.getElementById("signupForm");
-      const showSignup = document.getElementById("showSignup");
-      const showLogin = document.getElementById("showLogin");
-      const formImage = document.getElementById("formImage");
-
-      showSignup.addEventListener("click", (e) => {
-        e.preventDefault();
-        loginForm.classList.remove("active");
-        signupForm.classList.add("active");
-        formImage.src = "signup.svg";
-      });
-
-      showLogin.addEventListener("click", (e) => {
-        e.preventDefault();
-        signupForm.classList.remove("active");
-        loginForm.classList.add("active");
-        formImage.src = "Login.svg";
-      });
-    </script>
   </body>
 </html>
